@@ -24,65 +24,8 @@ REF LINK : https://hellofuture.orange.com/en/a-word-of-innovation-network-slicin
 
 Network Slicing Architecture
 ---
-+-------------------------------------------------------------+
-|                     Network Slicing Architecture              |
-|                                                             |
-|              +-------------------------+                    |
-|              |   Infrastructure Layer  |                    |
-|              |                         |                    |
-|              +-------------------------+                    |
-|                             |                               |
-|                             |                               |
-|              +-------------------------+                    |
-|              |     Management and      |                    |
-|              |      Orchestration     |                    |
-|              |         (MANO)         |                    |
-|              +-------------------------+                    |
-|                             |                               |
-|            +--------+-------+--------+                      |
-|            |        |                |                      |
-|            |        |                |                      |
-|   +----------------+---+     +--------+----------------+   |
-|   |    Network Slice    |     |   Network Slice       |   |
-|   | Lifecycle Management |     |  Service Management  |   |
-|   |                     |     |                      |   |
-|   +---------------------+     +----------------------+   |
-|            |        |                |                      |
-|            |        |                |                      |
-|   +----------------+---+     +--------+----------------+   |
-|   |    Network Slice    |     |   Network Slice       |   |
-|   | Resource Management |     | Resource Management  |   |
-|   |                     |     |                      |   |
-|   +---------------------+     +----------------------+   |
-|                             |                               |
-|                             |                               |
-|              +-------------------------+                    |
-|              |       Control Plane      |                    |
-|              |                         |                    |
-|              +-------------------------+                    |
-|                             |                               |
-|         +-------------------+-----------------+             |
-|         |                   |                 |             |
-|         |                   |                 |             |
-| +---------------+ +---------------------+ +-----------+    |
-| | NSSF          | | NSSMF               | | NSIMF     |    |
-| | (Network Slice| | (Network Slice Subnet| | (Network  |    |
-| | Selection    | |  Management Function)| | Slice     |    |
-| | Function)    | |                     | | Instance  |    |
-| +---------------+ +---------------------+ +-----------+    |
-|                             |                               |
-|                             |                               |
-|              +-------------------------+                    |
-|              |        User Plane       |                    |
-|              |                         |                    |
-|              +-------------------------+                    |
-|                                                             |
-|              +-------------------------+                    |
-|              |       Service Layer      |                    |
-|              |                         |                    |
-|              +-------------------------+                    |
-|                                                             |
-+-------------------------------------------------------------+
+![image](https://github.com/pavankumar0077/Network-Slice/assets/40380941/50b1195f-7899-4952-8e33-30ca2caddf61)
+
 
 ```
     Infrastructure Layer: This layer forms the foundation of the network slicing architecture and includes the physical and virtual resources required to support network services. It consists of physical infrastructure components such as servers, routers, switches, and radio access equipment, as well as virtualized resources like virtual machines, containers, and software-defined networking (SDN) controllers.
