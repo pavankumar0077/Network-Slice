@@ -50,3 +50,61 @@ Network Slicing Architecture
 
     Service Layer: The service layer represents the uppermost layer of the network slicing architecture, where specific services or applications are deployed. It includes service-specific functions, protocols, and interfaces required to provide the desired functionality. Examples of service layer components include virtualized network functions (VNFs), service gateways, application servers, and content delivery platforms.
 ``` 
+
+How 5G network slicing works in AOSP
+--
+
+![image](https://github.com/pavankumar0077/Network-Slice/assets/40380941/8cabf205-b4e7-4eed-a49d-5a7d6f22b2d2)
+
+Implementation
+---
+```     
+    To support 5G slicing on a device, the device must have a modem that supports the IRadio 1.6 HAL which has the setupDataCall_1_6 API. This API sets up a data connection and includes the following parameters for supporting 5G slicing:
+
+trafficDescriptor: Specifies traffic descriptor sent to the modem
+sliceInfo: Specifies information for the network slice to be used in case of EPDG to 5G handover
+matchAllRuleAllowed: Specifies whether using a default match-all URSP rule is allowed. Telephony sets this to true for default networks but not for slices. The match all rule is applied to default networks. When an application requests a specific slice that is not available, the specific slice is reported as not available, but the application can fallback to the default network.
+Modems must also implement the getSlicingConfig API unless it's reported as unsupported by the getHalDeviceCapabilities API.
+
+```
+Enterprise requirements
+---
+``` The following describes requirements for enterprises to use 5G network slicing on devices in an Android enterprise deployment.
+
+Ensure that fully managed or employee devices set up with a work profile are 5G SA-capable with modems that support the setupDataCall_1_6 API.
+Work with carrier partner on slice setup and performance or SLA characteristics.
+Enabling 5G slicing on devices set up with a work profile
+For devices that are set up with work profiles, 5G network slicing is off by default in AOSP. To enable network slicing, enterprise IT admins can turn on or off work profile app traffic routing to the enterprise network slice on a per-employee basis through the EMM DPC, which uses the setPreferentialNetworkServiceEnabled method in the DevicePolicyManager (DPM) API (introduced in Android 12).
+
+EMM vendors with custom DPCs must integrate the DevicePolicyManager API to support enterprise clients.
+``` 
+
+URSP rules
+--- 
+
+``` This section includes information for carriers on configuring URSP rules for different slice categories including enterprise, CBS, low latency, and high bandwidth traffic. When configuring URSP rules for different slice categories, carriers must use the following Android-specific values.
+
+ID	Value	Description
+OSId	97a498e3-fc92-5c94-8986-0333d06e4e47	The OSId for Android is a version 5 UUID generated with the namespace ISO OID and the name "Android".
+``` 
+
+Testing
+---
+``` 
+To test 5G network slicing, use the following manual test.
+
+To setup a device for testing, do the following:
+
+Ensure that the URSP policy is configured with a non-default rule that matches the enterprise category and that the corresponding route-selection descriptor maps the enterprise category to the enterprise slice; and a default rule directing traffic to the default internet slice.
+
+Ensure that a work profile is configured on the device.
+
+Opt in to using network slicing through the DPC
+
+To test 5G network slicing behavior, do the following:
+
+Verify that a PDU session is established with the enterprise slice (for example, by using a specific IP address) and that apps in work profile use that PDU session.
+Verify that a separate PDU session is established with the default internet slice and that apps in the personal profile use the PDU session.
+```
+
+REF LINK : https://source.android.com/docs/core/connect/5g-slicing
