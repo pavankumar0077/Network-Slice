@@ -27,8 +27,7 @@ Network Slicing Architecture
 ![image](https://github.com/pavankumar0077/Network-Slice/assets/40380941/50b1195f-7899-4952-8e33-30ca2caddf61)
 
 
-```
-    _Infrastructure Layer:_ This layer forms the foundation of the network slicing architecture and includes the physical and virtual resources required to support network services. It consists of physical infrastructure components such as servers, routers, switches, and radio access equipment, as well as virtualized resources like virtual machines, containers, and software-defined networking (SDN) controllers.
+   ** _Infrastructure Layer:_** This layer forms the foundation of the network slicing architecture and includes the physical and virtual resources required to support network services. It consists of physical infrastructure components such as servers, routers, switches, and radio access equipment, as well as virtualized resources like virtual machines, containers, and software-defined networking (SDN) controllers.
 
     **Management and Orchestration (MANO):** The MANO layer is responsible for the overall management and orchestration of network slices. It includes three main components:
 
@@ -49,7 +48,7 @@ Network Slicing Architecture
    ** User Plane:** The user plane handles the data traffic within each network slice. It consists of various network functions and data forwarding mechanisms that enable the transport of user data between endpoints. The user plane is tailored to the specific requirements of each slice, such as latency, bandwidth, and traffic prioritization.
 
     **Service Layer:** The service layer represents the uppermost layer of the network slicing architecture, where specific services or applications are deployed. It includes service-specific functions, protocols, and interfaces required to provide the desired functionality. Examples of service layer components include virtualized network functions (VNFs), service gateways, application servers, and content delivery platforms.
-``` 
+
 
 How 5G network slicing works in AOSP
 --
