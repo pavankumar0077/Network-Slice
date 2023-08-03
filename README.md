@@ -28,27 +28,27 @@ Network Slicing Architecture
 
 
 ```
-    Infrastructure Layer: This layer forms the foundation of the network slicing architecture and includes the physical and virtual resources required to support network services. It consists of physical infrastructure components such as servers, routers, switches, and radio access equipment, as well as virtualized resources like virtual machines, containers, and software-defined networking (SDN) controllers.
+    **Infrastructure Layer:** This layer forms the foundation of the network slicing architecture and includes the physical and virtual resources required to support network services. It consists of physical infrastructure components such as servers, routers, switches, and radio access equipment, as well as virtualized resources like virtual machines, containers, and software-defined networking (SDN) controllers.
 
-    Management and Orchestration (MANO): The MANO layer is responsible for the overall management and orchestration of network slices. It includes three main components:
+    **Management and Orchestration (MANO):** The MANO layer is responsible for the overall management and orchestration of network slices. It includes three main components:
 
-    Network Slice Lifecycle Management: This component handles the creation, modification, and termination of network slices. It ensures that the required resources are allocated, configured, and interconnected to form the desired slice.
+   ** Network Slice Lifecycle Management:** This component handles the creation, modification, and termination of network slices. It ensures that the required resources are allocated, configured, and interconnected to form the desired slice.
 
-    Network Slice Service Management: This component focuses on managing the services provided by network slices. It includes functions such as service instantiation, monitoring, scaling, and assurance.
+    **Network Slice Service Management:** This component focuses on managing the services provided by network slices. It includes functions such as service instantiation, monitoring, scaling, and assurance.
 
-    Network Slice Resource Management: This component deals with the allocation and optimization of network resources for each slice. It dynamically manages the allocation of virtualized resources, network bandwidth, and Quality of Service (QoS) parameters based on the slice requirements and network conditions.
+    **Network Slice Resource Management: **This component deals with the allocation and optimization of network resources for each slice. It dynamically manages the allocation of virtualized resources, network bandwidth, and Quality of Service (QoS) parameters based on the slice requirements and network conditions.
 
-    Control Plane: The control plane is responsible for controlling the behavior and configuration of network elements within each network slice. It includes the following elements:
+   ** Control Plane:** The control plane is responsible for controlling the behavior and configuration of network elements within each network slice. It includes the following elements:
 
-    Network Slice Selection Function (NSSF): The NSSF determines the appropriate network slice to use based on the service requirements, user preferences, and network conditions. It interacts with the policy and charging functions to select the best-fit slice for each user or service.
+    **Network Slice Selection Function (NSSF):** The NSSF determines the appropriate network slice to use based on the service requirements, user preferences, and network conditions. It interacts with the policy and charging functions to select the best-fit slice for each user or service.
 
-    Network Slice Subnet Management Function (NSSMF): The NSSMF manages the subnet aspects of network slices. It handles the creation, modification, and deletion of subnet instances within a slice.
+   ** Network Slice Subnet Management Function (NSSMF):** The NSSMF manages the subnet aspects of network slices. It handles the creation, modification, and deletion of subnet instances within a slice.
 
-    Network Slice Instance Management Function (NSIMF): The NSIMF is responsible for managing the network slice instances, including their lifecycle, configuration, and control.
+   ** Network Slice Instance Management Function (NSIMF):** The NSIMF is responsible for managing the network slice instances, including their lifecycle, configuration, and control.
 
-    User Plane: The user plane handles the data traffic within each network slice. It consists of various network functions and data forwarding mechanisms that enable the transport of user data between endpoints. The user plane is tailored to the specific requirements of each slice, such as latency, bandwidth, and traffic prioritization.
+   ** User Plane:** The user plane handles the data traffic within each network slice. It consists of various network functions and data forwarding mechanisms that enable the transport of user data between endpoints. The user plane is tailored to the specific requirements of each slice, such as latency, bandwidth, and traffic prioritization.
 
-    Service Layer: The service layer represents the uppermost layer of the network slicing architecture, where specific services or applications are deployed. It includes service-specific functions, protocols, and interfaces required to provide the desired functionality. Examples of service layer components include virtualized network functions (VNFs), service gateways, application servers, and content delivery platforms.
+    **Service Layer:** The service layer represents the uppermost layer of the network slicing architecture, where specific services or applications are deployed. It includes service-specific functions, protocols, and interfaces required to provide the desired functionality. Examples of service layer components include virtualized network functions (VNFs), service gateways, application servers, and content delivery platforms.
 ``` 
 
 How 5G network slicing works in AOSP
