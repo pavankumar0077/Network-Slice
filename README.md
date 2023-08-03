@@ -28,7 +28,7 @@ Network Slicing Architecture
 
 
 ```
-    **Infrastructure Layer:** This layer forms the foundation of the network slicing architecture and includes the physical and virtual resources required to support network services. It consists of physical infrastructure components such as servers, routers, switches, and radio access equipment, as well as virtualized resources like virtual machines, containers, and software-defined networking (SDN) controllers.
+    _Infrastructure Layer:_ This layer forms the foundation of the network slicing architecture and includes the physical and virtual resources required to support network services. It consists of physical infrastructure components such as servers, routers, switches, and radio access equipment, as well as virtualized resources like virtual machines, containers, and software-defined networking (SDN) controllers.
 
     **Management and Orchestration (MANO):** The MANO layer is responsible for the overall management and orchestration of network slices. It includes three main components:
 
